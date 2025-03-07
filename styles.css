@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+    /* retro color */
+    --red: #690B22;
+    --dark-red: #410514;
+    --white: #F1E3D3;
+    --peach: #E07A5F;
+    --green: #1B4D3E;
+    --black: #212121;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--black);
+    color: var(--white);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    color: var(--peach);
+}
+
+/* Social Icons */
+.social-icons a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-left: 15px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--peach);
+}
+.hero-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: 100dvh;
+    overflow: hidden;
+}
+
+.hero-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+/* Dark overlay */
+.hero-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+}
+.hero-text {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1em 2em;
+    background-color: var(--red);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 2rem;
+    transition: background-color 0.3s ease;
+}
+.btn:hover {
+    background-color: var(--dark-red);
+}
+/* Main Content General Styles */
+main {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+/* About Section */
+.about {
+    margin-bottom: 50px;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.about p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Features Section */
+.features {
+    background: #f8f8f8;
+    padding: 40px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.features h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.feature-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.feature {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feature i {
+    font-size: 2.5rem;
+    color: var(--red);
+    margin-bottom: 10px;
+}
+
+.feature h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Models Section */
+.models {
+    margin-bottom: 50px;
+}
+
+.models h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.model-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.model {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.model img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.model h3 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+/* Contact Section */
+.contact {
+    background: #111;
+    color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.contact p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.contact form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact input,
+.contact textarea {
+    padding: 12px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact textarea {
+    height: 100px;
+}
+
+.contact .btn {
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+/* Footer */
+.footer {
+    background: #111;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-logo h2 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.footer-logo p {
+    font-size: 1rem;
+    color: #aaa;
+}
+
+/* Footer Links */
+.footer-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+
+
+/* Social Media Icons */
+.footer-social a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-left: 15px;
+    transition: 0.3s;
+}
+
+.footer-social a:hover {
+    color: var(--red);
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    background: var(--red);
+    color: #fff;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.back-to-top:hover {
+    background: var(--peach);
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .feature-list, .model-list {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* Responsive Design  Footer*/
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-social {
+        margin-top: 10px;
+    }
+}
